@@ -501,8 +501,39 @@ function limparRelatorioEstoque(){
   document.getElementById("bauEstoque").value = "lider";
 }
 </script>
+<!-- ===== SEGURANÇA ===== -->
+<script>
+document.addEventListener("contextmenu",e=>e.preventDefault());
+document.addEventListener("selectstart",e=>e.preventDefault());
+document.addEventListener("dragstart",e=>e.preventDefault());
+
+document.addEventListener("keydown",e=>{
+  if(
+    e.key==="F12" ||
+    (e.ctrlKey&&e.shiftKey&&["I","J","C","K"].includes(e.key.toUpperCase())) ||
+    (e.ctrlKey&&["U","S","C","V","X","A","P"].includes(e.key.toUpperCase()))
+  ){
+    e.preventDefault(); return false;
+  }
+});
+
+(function(){
+  const d=new Image();
+  Object.defineProperty(d,"id",{get:function(){
+    document.body.innerHTML='<div style="background:black;color:white;height:100vh;display:flex;align-items:center;justify-content:center"><h1>⛔ ACESSO BLOQUEADO</h1></div>';
+    throw new Error();
+  }});
+  setInterval(()=>console.log(d),1000);
+})();
+
+document.querySelectorAll("img").forEach(img=>{
+  img.setAttribute("draggable","false");
+  img.style.pointerEvents="none";
+});
+</script>
 
 </body>
 </html>
+
 
 
