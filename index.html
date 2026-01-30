@@ -313,9 +313,10 @@ button.action:hover{
 </select>
 
 <select id="bauEstoque">
-  <option value="lider">Baú do Líder</option>
-  <option value="membro">Baú do Membro</option>
-  <option value="membro">Baú do Gerente</option>
+<option value="lider">Baú do Líder</option>
+<option value="gerente">Baú do Gerente</option>
+<option value="membro">Baú do Membro</option>
+
 </select>
 
 <div style="margin-top:15px;">
@@ -463,7 +464,15 @@ function gerarRelatorioEstoque(){
   const tipo = document.getElementById("tipoEstoque").value;
   const bau = document.getElementById("bauEstoque").value;
 
-  if(!nome || !id || !item || !qtd){ alert("Preencha todos os campos."); return; }
+  if(!nome || !id || !item || !qtd){
+    alert("Preencha todos os campos.");
+    return;
+  }
+
+  const bauTexto =
+    bau === "lider" ? "Baú do Líder" :
+    bau === "gerente" ? "Baú do Gerente" :
+    "Baú do Membro";
 
   relatorioEstoqueTexto =
 `👤 MEMBRO: ${nome}
@@ -471,11 +480,12 @@ function gerarRelatorioEstoque(){
 📦 Item: ${item}
 🔢 Quantidade: ${qtd}
 📌 Tipo: ${tipo === "retirou" ? "Retirou" : "Colocou"}
-📂 Baú: ${bau === "lider" ? "Líder" : "Gerente" : "Membro"}`;
+📂 Baú: ${bauTexto}`;
 
   document.getElementById("textoRelatorioEstoque").innerText = relatorioEstoqueTexto;
   document.getElementById("relatorioEstoque").style.display = "block";
 }
+
 
 function enviarEstoqueDiscord(){
   if(!relatorioEstoqueTexto){ alert("Gere o relatório primeiro."); return; }
@@ -541,6 +551,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
