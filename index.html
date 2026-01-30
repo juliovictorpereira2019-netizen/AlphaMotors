@@ -272,7 +272,11 @@ button.action:hover{
 <input id="nome" placeholder="Nome do membro">
 <input id="idMembro" placeholder="ID do membro">
 <input id="idCliente" placeholder="ID do cliente">
-
+<select id="tipoDesconto" onchange="atualizarTotal()">
+  <option value="0">Sem desconto</option>
+  <option value="10">Parceria (10% OFF)</option>
+  <option value="20">Membro da Facção (20% OFF)</option>
+</select>
 <div class="calc">
  <div class="row"><span>Fajuta (R$ 500)</span><input type="number" data-name="Fajuta" data-price="500" value="0"></div>
  <div class="row"><span>Five (R$ 1.000)</span><input type="number" data-name="Five" data-price="1000" value="0"></div>
@@ -391,11 +395,19 @@ function inicializarCalculadora(){
 
 function atualizarTotal(){
   let total = 0;
+
   calcInputs.forEach(i => {
     const qtd = Number(i.value);
-    if(qtd > 0) total += qtd * Number(i.dataset.price);
+    if(qtd > 0){
+      total += qtd * Number(i.dataset.price);
+    }
   });
-  document.getElementById("totalValor").innerText = total.toLocaleString("pt-BR");
+
+  const desconto = Number(document.getElementById("tipoDesconto").value);
+  const valorDesconto = total * (desconto / 100);
+  const totalFinal = total - valorDesconto;
+
+  document.getElementById("totalValor").innerText = totalFinal.toLocaleString("pt-BR");
 }
 
 function gerarRelatorio(){
@@ -551,6 +563,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
