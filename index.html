@@ -315,6 +315,7 @@ button.action:hover{
 <select id="bauEstoque">
   <option value="lider">Baú do Líder</option>
   <option value="membro">Baú do Membro</option>
+  <option value="membro">Baú do Gerente</option>
 </select>
 
 <div style="margin-top:15px;">
@@ -470,7 +471,7 @@ function gerarRelatorioEstoque(){
 📦 Item: ${item}
 🔢 Quantidade: ${qtd}
 📌 Tipo: ${tipo === "retirou" ? "Retirou" : "Colocou"}
-📂 Baú: ${bau === "lider" ? "Líder" : "Membro"}`;
+📂 Baú: ${bau === "lider" ? "Líder" : "Gerente" : "Membro"}`;
 
   document.getElementById("textoRelatorioEstoque").innerText = relatorioEstoqueTexto;
   document.getElementById("relatorioEstoque").style.display = "block";
@@ -540,6 +541,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
