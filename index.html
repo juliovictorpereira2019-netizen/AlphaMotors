@@ -390,43 +390,82 @@ function trocarTabela(){
 }
 
 function atualizarTotal(){
-  let total=0;
-  calcInputs.forEach(i=>{
-    const qtd=Number(i.value);
-    if(qtd>0) total+=qtd*Number(i.dataset.price);
+  let total = 0;
+
+  // MUNIÇÃO
+  document.querySelectorAll("#tabelaMunicao input").forEach(i=>{
+    const qtd = Number(i.value);
+    if(qtd > 0) total += qtd * Number(i.dataset.price);
   });
-  const desconto=Number(document.getElementById("tipoDesconto").value);
-  const totalFinal=total*(1-(desconto/100));
-  document.getElementById("totalValor").innerText=totalFinal.toLocaleString("pt-BR");
+
+  // ARMAS
+  document.querySelectorAll("#tabelaArmas input").forEach(i=>{
+    const qtd = Number(i.value);
+    if(qtd > 0) total += qtd * Number(i.dataset.price);
+  });
+
+  const desconto = Number(document.getElementById("tipoDesconto").value);
+  const totalFinal = total * (1 - desconto / 100);
+
+  document.getElementById("totalValor").innerText =
+    totalFinal.toLocaleString("pt-BR");
 }
-
 function gerarRelatorio(){
-  const nome=document.getElementById("nome").value;
-  const idMembro=document.getElementById("idMembro").value;
-  const idCliente=document.getElementById("idCliente").value;
-  if(!nome||!idMembro||!idCliente){ alert("Preencha todos os dados."); return; }
+  const nome = document.getElementById("nome").value;
+  const idMembro = document.getElementById("idMembro").value;
+  const idCliente = document.getElementById("idCliente").value;
 
-  let texto="", total=0;
-  calcInputs.forEach(i=>{
-    const qtd=Number(i.value);
-    if(qtd>0){
-      const sub=qtd*Number(i.dataset.price);
-      total+=sub;
-      texto+=`• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
+  if(!nome || !idMembro || !idCliente){
+    alert("Preencha todos os dados.");
+    return;
+  }
+
+  let texto = "";
+  let total = 0;
+
+  // MUNIÇÃO
+  document.querySelectorAll("#tabelaMunicao input").forEach(i=>{
+    const qtd = Number(i.value);
+    if(qtd > 0){
+      const sub = qtd * Number(i.dataset.price);
+      total += sub;
+      texto += `• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
     }
   });
-  if(!texto){ alert("Nenhum item selecionado."); return; }
 
-  const desconto=Number(document.getElementById("tipoDesconto").value);
-  const totalFinal=total*(1-(desconto/100));
+  // ARMAS
+  document.querySelectorAll("#tabelaArmas input").forEach(i=>{
+    const qtd = Number(i.value);
+    if(qtd > 0){
+      const sub = qtd * Number(i.dataset.price);
+      total += sub;
+      texto += `• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
+    }
+  });
 
-  relatorioTexto=`👤 MEMBRO: ${nome}\n🆔 ID: ${idMembro}\n👥 CLIENTE ID: ${idCliente}\n\n${texto}\n💰 TOTAL: R$ ${totalFinal.toLocaleString("pt-BR")}`;
-  relatorioTotal=totalFinal;
+  if(!texto){
+    alert("Nenhum item selecionado.");
+    return;
+  }
 
-  document.getElementById("textoRelatorio").innerText=relatorioTexto;
-  document.getElementById("totalValor").innerText=totalFinal.toLocaleString("pt-BR");
-  document.getElementById("relatorio").style.display="block";
+  const desconto = Number(document.getElementById("tipoDesconto").value);
+  const totalFinal = total * (1 - desconto / 100);
+
+  relatorioTexto =
+`👤 MEMBRO: ${nome}
+🆔 ID: ${idMembro}
+👥 CLIENTE ID: ${idCliente}
+
+${texto}
+💰 TOTAL GERAL: R$ ${totalFinal.toLocaleString("pt-BR")}`;
+
+  document.getElementById("textoRelatorio").innerText = relatorioTexto;
+  document.getElementById("totalValor").innerText =
+    totalFinal.toLocaleString("pt-BR");
+
+  document.getElementById("relatorio").style.display = "block";
 }
+
 
 function enviarDiscord(){
   if(!relatorioTexto){ alert("Gere o relatório primeiro."); return; }
@@ -521,6 +560,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
