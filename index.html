@@ -244,7 +244,7 @@ button.action:hover{
 <div class="card" id="calc">
 <h2 style="display:flex; justify-content:space-between; align-items:center;">
   🧮 Calculadora
-  <button id="toggleTabela" class="action" onclick="trocarTabela()">🔄 Munição</button>
+  <button id="toggleTabela" class="action" onclick="trocarTabela()">🔄 Armas</button>
 </h2>
 <input id="nome" placeholder="Nome do membro">
 <input id="idMembro" placeholder="ID do membro">
@@ -365,8 +365,16 @@ function abrir(id){
 let relatorioTexto="", relatorioTotal=0, calcInputs, tabelaAtiva="municao";
 
 function inicializarCalculadora(){
-  calcInputs = document.querySelectorAll(`#tabela${tabelaAtiva.charAt(0).toUpperCase()+tabelaAtiva.slice(1)} input`);
-  calcInputs.forEach(i=>i.addEventListener("input", atualizarTotal));
+  document.getElementById("tabelaMunicao").style.display = "block";
+  document.getElementById("tabelaArmas").style.display = "none";
+  tabelaAtiva = "municao";
+
+  const btn = document.getElementById("toggleTabela");
+  btn.innerText = "🔄 Armas";
+
+  calcInputs = document.querySelectorAll("#tabelaMunicao input");
+  calcInputs.forEach(i => i.addEventListener("input", atualizarTotal));
+
   atualizarTotal();
 }
 
@@ -560,6 +568,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
