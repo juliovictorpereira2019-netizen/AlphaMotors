@@ -268,7 +268,12 @@ button.action:hover{
 
 <!-- CALCULADORA -->
 <div class="card" id="calc">
-<h2>🧮 Calculadora de Munição</h2>
+<h2 style="display:flex; justify-content:space-between; align-items:center;">
+  🧮 Calculadora
+  <button id="toggleTabela" class="action" onclick="trocarTabela()">
+    🔄 Munição
+  </button>
+</h2>
 <input id="nome" placeholder="Nome do membro">
 <input id="idMembro" placeholder="ID do membro">
 <input id="idCliente" placeholder="ID do cliente">
@@ -277,17 +282,24 @@ button.action:hover{
   <option value="10">Parceria (10% OFF)</option>
   <option value="20">Membro da Facção (20% OFF)</option>
 </select>
-<div class="calc">
- <div class="row"><span>Fajuta (R$ 500)</span><input type="number" data-name="Fajuta" data-price="500" value="0"></div>
- <div class="row"><span>Five (R$ 1.000)</span><input type="number" data-name="Five" data-price="1000" value="0"></div>
- <div class="row"><span>Tec-9 (R$ 1.200)</span><input type="number" data-name="Tec-9" data-price="1200" value="0"></div>
- <div class="row"><span>SMGs (R$ 2.000)</span><input type="number" data-name="SMGs" data-price="2000" value="0"></div>
- <div class="row"><span>Fuzis (R$ 3.000)</span><input type="number" data-name="Fuzis" data-price="3000" value="0"></div>
- <div class="row"><span>G3 (R$ 4.000)</span><input type="number" data-name="G3" data-price="4000" value="0"></div>
- <div class="row"><span>QBZ83 (R$ 9.000)</span><input type="number" data-name="QBZ83" data-price="9000" value="0"></div>
- <div class="row"><span>ADVANCED RIFRE (R$ 9.000)</span><input type="number" data-name="ADVANCED RIFRE" data-price="9000" value="0"></div>
- <div class="row"><span>BULLPUP RIFRE MK2 (R$ 10.000)</span><input type="number" data-name="BULLPUP RIFRE MK2" data-price="10000" value="0"></div>
- <div class="row"><span>FN SCAR (R$ 10.000)</span><input type="number" data-name="FN SCAR" data-price="10000" value="0"></div>
+<div class="calc" id="tabelaMunicao">
+   <div class="row"><span>Fajuta (R$ 500)</span><input type="number" data-name="Fajuta" data-price="500" value="0"></div>
+   <div class="row"><span>Five (R$ 1.000)</span><input type="number" data-name="Five" data-price="1000" value="0"></div>
+   <div class="row"><span>Tec-9 (R$ 1.200)</span><input type="number" data-name="Tec-9" data-price="1200" value="0"></div>
+   <div class="row"><span>SMGs (R$ 2.000)</span><input type="number" data-name="SMGs" data-price="2000" value="0"></div>
+   <div class="row"><span>Fuzis (R$ 3.000)</span><input type="number" data-name="Fuzis" data-price="3000" value="0"></div>
+   <div class="row"><span>G3 (R$ 4.000)</span><input type="number" data-name="G3" data-price="4000" value="0"></div>
+   <div class="row"><span>QBZ83 (R$ 9.000)</span><input type="number" data-name="QBZ83" data-price="9000" value="0"></div>
+   <div class="row"><span>ADVANCED RIFRE (R$ 9.000)</span><input type="number" data-name="ADVANCED RIFRE" data-price="9000" value="0"></div>
+   <div class="row"><span>BULLPUP RIFRE MK2 (R$ 10.000)</span><input type="number" data-name="BULLPUP RIFRE MK2" data-price="10000" value="0"></div>
+   <div class="row"><span>FN SCAR (R$ 10.000)</span><input type="number" data-name="FN SCAR" data-price="10000" value="0"></div>
+</div>
+
+<div class="calc" id="tabelaArmas" style="display:none">
+  <div class="row"><span>Pistola (R$ 15.000)</span><input type="number" data-name="Pistola" data-price="15000" value="0"></div>
+  <div class="row"><span>SMG (R$ 35.000)</span><input type="number" data-name="SMG" data-price="35000" value="0"></div>
+  <div class="row"><span>Fuzil (R$ 75.000)</span><input type="number" data-name="Fuzil" data-price="75000" value="0"></div>
+  <div class="row"><span>Sniper (R$ 120.000)</span><input type="number" data-name="Sniper" data-price="120000" value="0"></div>
 </div>
 
 <br>
@@ -564,6 +576,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
