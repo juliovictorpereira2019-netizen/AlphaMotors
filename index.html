@@ -414,6 +414,28 @@ function atualizarTotal(){
       total += qtd * Number(i.dataset.price);
     }
   });
+let tabelaAtiva = "municao"; // Começa mostrando a tabela de munição
+
+function trocarTabela(){
+  const tabelaMunicao = document.getElementById("tabelaMunicao");
+  const tabelaArmas = document.getElementById("tabelaArmas");
+  const btn = document.getElementById("toggleTabela");
+
+  if(tabelaAtiva === "municao"){
+    tabelaMunicao.style.display = "none";
+    tabelaArmas.style.display = "block";
+    tabelaAtiva = "armas";
+    btn.innerText = "🔄 Armas"; // muda o texto do botão
+  } else {
+    tabelaMunicao.style.display = "block";
+    tabelaArmas.style.display = "none";
+    tabelaAtiva = "municao";
+    btn.innerText = "🔄 Munição";
+  }
+
+  // Atualiza os inputs da tabela ativa
+  inicializarCalculadora();
+}
 
   const desconto = Number(document.getElementById("tipoDesconto").value);
   const valorDesconto = total * (desconto / 100);
@@ -576,6 +598,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
