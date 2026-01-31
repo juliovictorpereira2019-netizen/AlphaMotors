@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <title>Real Medellin - Site Oficial</title>
 <link rel="icon" href="https://imgur.com/HK4PvFO.png">
-  
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <!-- Google Fonts & Font Awesome -->
@@ -23,7 +22,6 @@ body{
   padding-top:70px;
 }
 
-/* HEADER */
 header{
   height:70px;
   background:#7b7b7b;
@@ -65,14 +63,12 @@ nav button{
   cursor:pointer;
 }
 
-/* MAIN PÚBLICO */
 .container-main{
   max-width:1200px;
   margin:20px auto 60px;
   padding:0 20px;
 }
 
-/* CARDS ANIMADOS (regras) */
 .cards-animated{
   display:flex;
   justify-content:center;
@@ -101,7 +97,6 @@ nav button{
   margin-bottom:10px;
 }
 
-/* SOBRE NÓS */
 .about-section{
   margin-top:60px;
 }
@@ -117,15 +112,13 @@ nav button{
   color:#555;
 }
 
-/* MAIN INTERNO (calculadora e estoque) */
 main.internal{
   max-width:900px;
   margin:40px auto;
   padding:0 20px;
-  display:none; /* OCULTO ANTES DO LOGIN */
+  display:none;
 }
 
-/* CARD */
 .card{
   background:#fff;
   padding:25px;
@@ -134,7 +127,6 @@ main.internal{
   margin-bottom:25px;
 }
 
-/* INPUTS E SELECT */
 input, select{
   width:100%;
   padding:10px;
@@ -143,7 +135,6 @@ input, select{
   border:1px solid #ccc;
 }
 
-/* BUTTON */
 button.action{
   background:#1fd1c1;
   border:none;
@@ -159,7 +150,6 @@ button.action:hover{
   background:#17b9a7;
 }
 
-/* RELATÓRIO */
 .relatorio{
   margin-top:15px;
   background:#f1fffb;
@@ -169,9 +159,8 @@ button.action:hover{
   white-space: pre-wrap;
 }
 
-/* MODAL LOGIN */
 #login {
-  display: none; /* escondido por padrão */
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -192,55 +181,43 @@ button.action:hover{
   text-align: center;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
-
 </style>
 </head>
 <body>
 
 <header>
  <strong>Real <span>Medellin</span></strong>
-
  <nav id="menu">
   <button onclick="abrir('calc')"><i class="fa fa-calculator"></i> Calculadora</button>
   <button onclick="abrir('estoque')"><i class="fa fa-box"></i> Estoque</button>
  </nav>
-
  <button class="login-btn" onclick="abrirLogin()">Login</button>
 </header>
 
-<!-- MAIN PÚBLICO -->
 <main class="container-main">
-
-  <!-- RECRUTAMENTO COM VÍDEO -->
   <section id="recrutamento-video" class="text-center my-5">
     <h2 class="mb-4">📢 Quer se juntar à Real Medellin?</h2>
     <p style="max-width:700px; margin:auto; font-size:16px; line-height:1.6;">
-      Assista ao vídeo abaixo para conhecer as regras, entender a estrutura da Real Medellin e aprender como se tornar um membro da nossa facção. Todos os novos integrantes precisam assistir ao vídeo antes de solicitar entrada.
+      Assista ao vídeo abaixo para conhecer as regras e como se tornar membro.
     </p>
-    
     <div class="mt-4">
       <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
         <iframe src="https://www.youtube.com/embed/COLE_SEU_VIDEO_AQUI" 
-                title="Vídeo de Recrutamento" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
+                title="Vídeo de Recrutamento" allowfullscreen>
         </iframe>
       </div>
     </div>
-    
     <p class="mt-3" style="font-size:14px; color:#555;">
-      Após assistir ao vídeo, clique em <strong>Login</strong> no topo para acessar a calculadora e demais sistemas internos.
+      Após assistir, clique em <strong>Login</strong> no topo.
     </p>
   </section>
 
-  <!-- REGRAS -->
   <section id="regras" class="cards-animated">
     <div class="card-animated">
       <i class="fas fa-gavel fa-3x"></i>
       <h3 class="mt-3">Regras da Cidade</h3>
       <p>Respeite todos, siga a lei, não use trapaças, respeite áreas restritas e aja conforme seu papel na cidade.</p>
     </div>
-
     <div class="card-animated">
       <i class="fa-solid fa-coins fa-3x text-warning"></i>
       <h3 class="mt-3">Valores da Tabela</h3>
@@ -248,7 +225,6 @@ button.action:hover{
     </div>
   </section>
 
-  <!-- SOBRE NÓS -->
   <section class="about-section">
     <h2 class="text-center mb-4">Sobre Nós</h2>
     <div class="row align-items-center">
@@ -256,23 +232,19 @@ button.action:hover{
         <img src="https://imgur.com/wTsiZXO.png" alt="Real Medellin">
       </div>
       <div class="col-md-6">
-        <p><strong>Real Medellin</strong> atua na Central RP, especializada no fornecimento de munição e equipamentos para facções. Estamos presentes no mercado há mais de 5 anos, sempre investindo em novas estratégias e recursos para garantir a melhor proteção e eficiência para nossos aliados. Contamos com membros altamente capacitados, com experiência em operações e logística, prezando sempre pela segurança e confiança. Por se tratar de uma facção organizada, mantemos um ambiente de respeito e cooperação entre integrantes e parceiros, seguindo sempre padrões de excelência e comprometimento.</p>
+        <p><strong>Real Medellin</strong> atua na Central RP, fornecendo munição e equipamentos para facções, com mais de 5 anos de experiência.</p>
       </div>
     </div>
   </section>
-
 </main>
 
-<!-- MAIN INTERNO (Calculadora e Estoque) -->
 <main class="internal">
 
 <!-- CALCULADORA -->
 <div class="card" id="calc">
 <h2 style="display:flex; justify-content:space-between; align-items:center;">
   🧮 Calculadora
-  <button id="toggleTabela" class="action" onclick="trocarTabela()">
-    🔄 Munição
-  </button>
+  <button id="toggleTabela" class="action" onclick="trocarTabela()">🔄 Munição</button>
 </h2>
 <input id="nome" placeholder="Nome do membro">
 <input id="idMembro" placeholder="ID do membro">
@@ -282,6 +254,7 @@ button.action:hover{
   <option value="10">Parceria (10% OFF)</option>
   <option value="20">Membro da Facção (20% OFF)</option>
 </select>
+
 <div class="calc" id="tabelaMunicao">
    <div class="row"><span>Fajuta (R$ 500)</span><input type="number" data-name="Fajuta" data-price="500" value="0"></div>
    <div class="row"><span>Five (R$ 1.000)</span><input type="number" data-name="Five" data-price="1000" value="0"></div>
@@ -332,7 +305,6 @@ button.action:hover{
 <option value="lider">Baú do Líder</option>
 <option value="gerente">Baú do Gerente</option>
 <option value="membro">Baú do Membro</option>
-
 </select>
 
 <div style="margin-top:15px;">
@@ -349,7 +321,6 @@ button.action:hover{
 
 </main>
 
-<!-- LOGIN -->
 <div class="modal" id="login">
   <div class="modal-box">
     <h3>🔐 Tela de Login</h3>
@@ -361,29 +332,25 @@ button.action:hover{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 <script>
-const SENHA_MECANICO = "medellin";
+/* ================= CONFIGURACAO ================= */
+const SENHA_MECANICO = "medellin"; // ideal: mover pro backend
 const WEBHOOK_MUNICION = "https://discord.com/api/webhooks/1465906229170802758/0P_d2ZGA_sZKeetwhyfk9EenCD_Za8bPFEpQuwvWLtxcFOqXAnJ9Pg6SY9-SBXGI9kBJ";
-const WEBHOOK_ESTOQUE = "https://discord.com/api/webhooks/1466281331095769108/OASx5Xo7RJjzPbl4WzbknW0UzLUHHyvWmcMcAqkwjudXS3LK0bfmB0QZ1W2024TvOHcH";
+const WEBHOOK_ESTOQUE = "https://discord.com/api/webhooks/1466281331095769108/OASx5Xo7RJjzPbl4WzbknW0UzLUHHyvWmcMcAqkwjudXS3LK0bfmB0QZ1W2024TvOHcH"
 
 /* LOGIN */
-function abrirLogin(){ 
-  document.getElementById("login").style.display="flex"; 
-}
+function abrirLogin(){ document.getElementById("login").style.display="flex"; }
 
 function logar(){
   const senhaInput = document.getElementById("senha").value;
-  if(senhaInput !== SENHA_MECANICO){
-    alert("Senha incorreta");
-    return;
-  }
-  document.getElementById("login").style.display = "none";
-  document.querySelector('main.internal').style.display = 'block';
-  document.getElementById("menu").style.display = "flex";
+  if(senhaInput!==SENHA_MECANICO){ alert("Senha incorreta"); return; }
+  document.getElementById("login").style.display="none";
+  document.querySelector('main.internal').style.display='block';
+  document.getElementById("menu").style.display="flex";
   abrir('calc');
-  document.getElementById("recrutamento-video").style.display = "none";
-  document.getElementById("regras").style.display = "none";
-  document.querySelector(".about-section").style.display = "none";
-  document.querySelector(".login-btn").style.display = "none";
+  document.getElementById("recrutamento-video").style.display="none";
+  document.getElementById("regras").style.display="none";
+  document.querySelector(".about-section").style.display="none";
+  document.querySelector(".login-btn").style.display="none";
   inicializarCalculadora();
 }
 
@@ -395,174 +362,130 @@ function abrir(id){
 }
 
 /* CALCULADORA */
-let relatorioTexto = "";
-let relatorioTotal = 0;
-let calcInputs;
+let relatorioTexto="", relatorioTotal=0, calcInputs, tabelaAtiva="municao";
 
 function inicializarCalculadora(){
-  calcInputs = document.querySelectorAll("#calc .calc input");
-  calcInputs.forEach(input => input.addEventListener("input", atualizarTotal));
+  calcInputs = document.querySelectorAll(`#tabela${tabelaAtiva.charAt(0).toUpperCase()+tabelaAtiva.slice(1)} input`);
+  calcInputs.forEach(i=>i.addEventListener("input", atualizarTotal));
   atualizarTotal();
 }
 
-function atualizarTotal(){
-  let total = 0;
-
-  calcInputs.forEach(i => {
-    const qtd = Number(i.value);
-    if(qtd > 0){
-      total += qtd * Number(i.dataset.price);
-    }
-  });
-let tabelaAtiva = "municao"; // Começa mostrando a tabela de munição
-
 function trocarTabela(){
-  const tabelaMunicao = document.getElementById("tabelaMunicao");
-  const tabelaArmas = document.getElementById("tabelaArmas");
-  const btn = document.getElementById("toggleTabela");
+  const tabelaMunicao=document.getElementById("tabelaMunicao");
+  const tabelaArmas=document.getElementById("tabelaArmas");
+  const btn=document.getElementById("toggleTabela");
 
-  if(tabelaAtiva === "municao"){
-    tabelaMunicao.style.display = "none";
-    tabelaArmas.style.display = "block";
-    tabelaAtiva = "armas";
-    btn.innerText = "🔄 Armas"; // muda o texto do botão
-  } else {
-    tabelaMunicao.style.display = "block";
-    tabelaArmas.style.display = "none";
-    tabelaAtiva = "municao";
-    btn.innerText = "🔄 Munição";
+  if(tabelaAtiva==="municao"){
+    tabelaMunicao.style.display="none";
+    tabelaArmas.style.display="block";
+    tabelaAtiva="armas";
+    btn.innerText="🔄 Munição";
+  }else{
+    tabelaMunicao.style.display="block";
+    tabelaArmas.style.display="none";
+    tabelaAtiva="municao";
+    btn.innerText="🔄 Armas";
   }
-
-  // Atualiza os inputs da tabela ativa
   inicializarCalculadora();
 }
 
-  const desconto = Number(document.getElementById("tipoDesconto").value);
-  const valorDesconto = total * (desconto / 100);
-  const totalFinal = total - valorDesconto;
-
-  document.getElementById("totalValor").innerText = totalFinal.toLocaleString("pt-BR");
+function atualizarTotal(){
+  let total=0;
+  calcInputs.forEach(i=>{
+    const qtd=Number(i.value);
+    if(qtd>0) total+=qtd*Number(i.dataset.price);
+  });
+  const desconto=Number(document.getElementById("tipoDesconto").value);
+  const totalFinal=total*(1-(desconto/100));
+  document.getElementById("totalValor").innerText=totalFinal.toLocaleString("pt-BR");
 }
 
 function gerarRelatorio(){
-  const nome = document.getElementById("nome").value;
-  const idMembro = document.getElementById("idMembro").value;
-  const idCliente = document.getElementById("idCliente").value;
-  if(!nome || !idMembro || !idCliente){ alert("Preencha todos os dados."); return; }
+  const nome=document.getElementById("nome").value;
+  const idMembro=document.getElementById("idMembro").value;
+  const idCliente=document.getElementById("idCliente").value;
+  if(!nome||!idMembro||!idCliente){ alert("Preencha todos os dados."); return; }
 
-  let texto = "";
-  let total = 0;
+  let texto="", total=0;
   calcInputs.forEach(i=>{
-    const qtd = Number(i.value);
-    if(qtd > 0){
-      const sub = qtd * Number(i.dataset.price);
-      total += sub;
-      texto += `• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
+    const qtd=Number(i.value);
+    if(qtd>0){
+      const sub=qtd*Number(i.dataset.price);
+      total+=sub;
+      texto+=`• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
     }
   });
   if(!texto){ alert("Nenhum item selecionado."); return; }
 
-  relatorioTexto = `👤 MEMBRO: ${nome}\n🆔 ID: ${idMembro}\n👥 CLIENTE ID: ${idCliente}\n\n${texto}`;
-  relatorioTotal = total;
-  document.getElementById("textoRelatorio").innerText = relatorioTexto + `\n💰 TOTAL: R$ ${total.toLocaleString("pt-BR")}`;
-  document.getElementById("totalValor").innerText = total.toLocaleString("pt-BR");
+  const desconto=Number(document.getElementById("tipoDesconto").value);
+  const totalFinal=total*(1-(desconto/100));
+
+  relatorioTexto=`👤 MEMBRO: ${nome}\n🆔 ID: ${idMembro}\n👥 CLIENTE ID: ${idCliente}\n\n${texto}\n💰 TOTAL: R$ ${totalFinal.toLocaleString("pt-BR")}`;
+  relatorioTotal=totalFinal;
+
+  document.getElementById("textoRelatorio").innerText=relatorioTexto;
+  document.getElementById("totalValor").innerText=totalFinal.toLocaleString("pt-BR");
   document.getElementById("relatorio").style.display="block";
 }
 
 function enviarDiscord(){
   if(!relatorioTexto){ alert("Gere o relatório primeiro."); return; }
-  fetch(WEBHOOK_MUNICION,{
-    method:"POST",
-    headers:{ "Content-Type":"application/json" },
-    body:JSON.stringify({
-      embeds:[{
-        title:"📄 Relatório de Munição",
-        description: relatorioTexto,
-        color: 3066993,
-        fields:[ { name:"💰 Total", value:`R$ ${relatorioTotal.toLocaleString("pt-BR")}` } ],
-        footer:{ text:"Sistema Real Medellin" }
-      }]
-    })
+  fetch(WEBHOOK_MUNICION,{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({embeds:[{title:"📄 Relatório de Munição",description:relatorioTexto,color:3066993,footer:{text:"Sistema Real Medellin"}}]})
   });
-  alert("Relatório de munição enviado para o Discord!");
+  alert("Relatório de munição enviado!");
 }
 
 function limpar(){
-  document.getElementById("nome").value = "";
-  document.getElementById("idMembro").value = "";
-  document.getElementById("idCliente").value = "";
-  document.getElementById("tipoDesconto").value = "";
-  if(calcInputs){ calcInputs.forEach(i => i.value = 0); }
-  relatorioTexto = "";
-  relatorioTotal = 0;
-  document.getElementById("textoRelatorio").innerText = "";
-  document.getElementById("totalValor").innerText = "0";
+  document.getElementById("nome").value="";
+  document.getElementById("idMembro").value="";
+  document.getElementById("idCliente").value="";
+  document.getElementById("tipoDesconto").value="0";
+  if(calcInputs) calcInputs.forEach(i=>i.value=0);
+  relatorioTexto=""; relatorioTotal=0;
+  document.getElementById("textoRelatorio").innerText="";
+  document.getElementById("totalValor").innerText="0";
   document.getElementById("relatorio").style.display="none";
 }
 
 /* ESTOQUE */
-let relatorioEstoqueTexto = "";
-
+let relatorioEstoqueTexto="";
 function gerarRelatorioEstoque(){
-  const nome = document.getElementById("nomeEstoque").value;
-  const id = document.getElementById("idMembroEstoque").value;
-  const item = document.getElementById("itemEstoque").value;
-  const qtd = document.getElementById("qtdEstoque").value;
-  const tipo = document.getElementById("tipoEstoque").value;
-  const bau = document.getElementById("bauEstoque").value;
+  const nome=document.getElementById("nomeEstoque").value;
+  const id=document.getElementById("idMembroEstoque").value;
+  const item=document.getElementById("itemEstoque").value;
+  const qtd=document.getElementById("qtdEstoque").value;
+  const tipo=document.getElementById("tipoEstoque").value;
+  const bau=document.getElementById("bauEstoque").value;
 
-  if(!nome || !id || !item || !qtd){
-    alert("Preencha todos os campos.");
-    return;
-  }
+  if(!nome||!id||!item||!qtd){ alert("Preencha todos os campos."); return; }
 
-  const bauTexto =
-    bau === "lider" ? "Baú do Líder" :
-    bau === "gerente" ? "Baú do Gerente" :
-    "Baú do Membro";
+  const bauTexto=bau==="lider"?"Baú do Líder":bau==="gerente"?"Baú do Gerente":"Baú do Membro";
 
-  relatorioEstoqueTexto =
-`👤 MEMBRO: ${nome}
-🆔 ID: ${id}
-📦 Item: ${item}
-🔢 Quantidade: ${qtd}
-📌 Tipo: ${tipo === "retirou" ? "Retirou" : "Colocou"}
-📂 Baú: ${bauTexto}`;
+  relatorioEstoqueTexto=`👤 MEMBRO: ${nome}\n🆔 ID: ${id}\n📦 Item: ${item}\n🔢 Quantidade: ${qtd}\n📌 Tipo: ${tipo==="retirou"?"Retirou":"Colocou"}\n📂 Baú: ${bauTexto}`;
 
-  document.getElementById("textoRelatorioEstoque").innerText = relatorioEstoqueTexto;
-  document.getElementById("relatorioEstoque").style.display = "block";
+  document.getElementById("textoRelatorioEstoque").innerText=relatorioEstoqueTexto;
+  document.getElementById("relatorioEstoque").style.display="block";
 }
-
 
 function enviarEstoqueDiscord(){
   if(!relatorioEstoqueTexto){ alert("Gere o relatório primeiro."); return; }
-
-  fetch(WEBHOOK_ESTOQUE, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      embeds: [{
-        title: "📦 Relatório de Estoque",
-        description: relatorioEstoqueTexto,
-        color: 16753920,
-        footer: { text: "Sistema Real Medellin - Estoque" }
-      }]
-    })
+  fetch(WEBHOOK_ESTOQUE,{method:"POST",headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({embeds:[{title:"📦 Relatório de Estoque",description:relatorioEstoqueTexto,color:16753920,footer:{text:"Sistema Real Medellin - Estoque"}}]})
   });
-
-  alert("Relatório de estoque enviado para o Discord!");
+  alert("Relatório de estoque enviado!");
 }
 
 function limparRelatorioEstoque(){
-  relatorioEstoqueTexto = "";
-  document.getElementById("textoRelatorioEstoque").innerText = "";
-  document.getElementById("relatorioEstoque").style.display = "none";
-  document.getElementById("nomeEstoque").value = "";
-  document.getElementById("idMembroEstoque").value = "";
-  document.getElementById("itemEstoque").value = "";
-  document.getElementById("qtdEstoque").value = "";
-  document.getElementById("tipoEstoque").value = "retirou";
-  document.getElementById("bauEstoque").value = "lider";
+  relatorioEstoqueTexto="";
+  document.getElementById("textoRelatorioEstoque").innerText="";
+  document.getElementById("relatorioEstoque").style.display="none";
+  document.getElementById("nomeEstoque").value="";
+  document.getElementById("idMembroEstoque").value="";
+  document.getElementById("itemEstoque").value="";
+  document.getElementById("qtdEstoque").value="";
+  document.getElementById("tipoEstoque").value="retirou";
+  document.getElementById("bauEstoque").value="lider";
 }
 </script>
 <!-- ===== SEGURANÇA ===== -->
@@ -598,6 +521,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
