@@ -372,11 +372,13 @@ function inicializarCalculadora(){
   const btn = document.getElementById("toggleTabela");
   btn.innerText = "🔄 Armas";
 
-  calcInputs = document.querySelectorAll("#tabelaMunicao input");
-  calcInputs.forEach(i => i.addEventListener("input", atualizarTotal));
+  // 🔥 PEGA TODOS OS INPUTS (MUNIÇÃO + ARMAS)
+  document.querySelectorAll("#tabelaMunicao input, #tabelaArmas input")
+    .forEach(i => i.addEventListener("input", atualizarTotal));
 
   atualizarTotal();
 }
+
 
 function trocarTabela(){
   const tabelaMunicao=document.getElementById("tabelaMunicao");
@@ -487,7 +489,8 @@ function limpar(){
   document.getElementById("idMembro").value="";
   document.getElementById("idCliente").value="";
   document.getElementById("tipoDesconto").value="0";
-  if(calcInputs) calcInputs.forEach(i=>i.value=0);
+  document.querySelectorAll("#tabelaMunicao input, #tabelaArmas input")
+  .forEach(i => i.value = 0);
   relatorioTexto=""; relatorioTotal=0;
   document.getElementById("textoRelatorio").innerText="";
   document.getElementById("totalValor").innerText="0";
@@ -567,6 +570,7 @@ document.querySelectorAll("img").forEach(img=>{
 
 </body>
 </html>
+
 
 
 
