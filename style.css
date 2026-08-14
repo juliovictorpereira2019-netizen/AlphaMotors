@@ -1,0 +1,1850 @@
+/* =====================================
+   MAPA DE RESERVAS - STYLE.CSS
+===================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,Arial,sans-serif;
+}
+
+
+body{
+
+    background:#F3E2C7;
+
+}
+
+
+
+/* TOPO */
+
+/* ================================
+   TOPO MODERNO
+================================ */
+/* =====================================
+   CACTO LADO DIREITO
+===================================== */
+
+
+.cactoLateral{
+
+    position:fixed;
+
+    right:25px;
+
+    bottom:20px;
+
+    width:260px;
+
+    height:500px;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    justify-content:center;
+
+    pointer-events:none;
+
+    z-index:1;
+
+}
+
+
+
+.cactoLateral img{
+
+    max-width:100%;
+
+    max-height:100%;
+
+    object-fit:contain;
+
+    opacity:.95;
+
+}
+
+
+
+/* Mantém o mapa por cima */
+
+.wrapper,
+.topo,
+.legend{
+
+    position:relative;
+
+    z-index:5;
+
+}
+.topo{
+
+    height:78px;
+
+    background:#315B45;
+
+    color:white;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+}
+
+/* LOGO + EMPRESA */
+
+.logoSistema{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.logoPousada{
+
+    width:52px;
+
+    height:52px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:white;
+
+    padding:3px;
+
+}
+
+
+
+.dadosEmpresa{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.dadosEmpresa h2{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    color:#fff;
+
+}
+
+
+.dadosEmpresa span{
+
+    font-size:12px;
+
+    color:#cbd5e1;
+
+}
+
+
+
+/* MENU */
+
+.menu{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.menu button{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    padding:11px 22px;
+
+    border-radius:10px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.2);
+
+}
+
+
+.menu button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-1px);
+
+}
+
+
+
+/* NOTIFICAÇÃO */
+
+.notificacao{
+
+    width:42px;
+
+    height:42px;
+
+    background:#374151;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    position:relative;
+
+}
+
+
+.notificacao:hover{
+
+    background:#4b5563;
+
+}
+
+
+.notificacao span{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    background:#ef4444;
+
+    width:20px;
+
+    height:20px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+
+
+/* USUARIO */
+
+.usuarioSistema{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.fotoUsuario{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#fff;
+
+    padding:3px;
+
+}
+
+
+
+.nomeUsuario{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.nomeUsuario strong{
+
+    font-size:14px;
+
+}
+
+
+.nomeUsuario small{
+
+    font-size:12px;
+
+    color:#cbd5e1;
+
+}
+
+
+
+/* FILTRO DE MÊS */
+
+#filtroMes{
+
+    height:40px;
+
+    min-width:110px;
+
+    padding:0 15px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:white;
+
+    color:#1f2937;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    outline:none;
+
+    box-shadow:0 3px 8px rgba(0,0,0,.15);
+
+}
+
+
+#filtroMes:hover{
+
+    background:#f1f5f9;
+
+}
+.topo h2{
+
+    font-size:22px;
+
+}
+
+
+
+.menu{
+
+    display:flex;
+
+    gap:10px;
+
+}
+
+
+
+.menu button{
+
+    border:none;
+
+    background:#2563eb;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+.menu button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+/* LEGENDA */
+
+
+.legend{
+
+    display:flex;
+
+    gap:20px;
+
+    padding:15px;
+
+    background:white;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+
+
+.itemLegend{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+
+
+.cor{
+
+    width:18px;
+
+    height:18px;
+
+    border-radius:5px;
+
+}
+
+
+.verde{
+
+    background:#22c55e;
+
+}
+
+
+.amarelo{
+
+    background:#f59e0b;
+
+}
+
+
+.azul{
+
+    background:#3b82f6;
+
+}
+
+
+.vermelho{
+
+    background:#ef4444;
+
+}
+
+
+
+/* ÁREA DO MAPA */
+
+
+.wrapper{
+
+    width:100%;
+
+    overflow:auto;
+
+    height:calc(100vh - 120px);
+
+}
+
+
+
+.timeline{
+
+    display:flex;
+
+    min-width:5000px;
+
+}
+
+
+
+/* COLUNA DAS CASAS */
+
+
+.colunaHospedagem{
+
+    width:260px;
+
+    min-width:260px;
+
+    background:white;
+
+    border-right:1px solid #ddd;
+
+    position:sticky;
+
+    left:0;
+
+    z-index:50;
+
+}
+
+
+
+.headerHospedagem{
+
+    height:90px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#374151;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+
+
+.quarto{
+
+    height:55px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding-left:15px;
+
+    border-bottom:1px solid #ececec;
+
+    font-size:14px;
+
+}
+
+
+
+/* CALENDÁRIO */
+
+
+.calendario{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.meses{
+
+    display:flex;
+
+}
+
+
+
+.mes{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+
+.nomeMes{
+
+    height:40px;
+
+    background:#2563eb;
+
+    color:white;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-weight:bold;
+
+}
+
+
+
+.dias{
+
+    display:flex;
+
+    height:50px;
+
+}
+
+.dia{
+    width:34px;
+    min-width:34px;
+    height:44px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    border-right:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+
+    background:#fff;
+}
+
+.semana{
+    font-size:9px;
+    font-weight:600;
+    color:#6b7280;
+    text-transform:uppercase;
+    line-height:1;
+}
+
+.numero{
+    margin-top:3px;
+    font-size:15px;
+    font-weight:700;
+    color:#111827;
+    line-height:1;
+}
+
+/* Botão + nas células */
+
+.celula{
+    position:relative;
+}
+
+
+.fotoPerfil{
+    width:42px;
+    height:42px;
+    border-radius:50%;
+    object-fit:cover;
+    border:2px solid #fff;
+}
+
+.logoSistema h2{
+    font-size:18px;
+    margin:0;
+}
+
+.logoSistema small{
+    color:#d1d5db;
+    font-size:12px;
+}
+
+.notificacao{
+
+    position:relative;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:8px;
+
+    background:#374151;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    color:#fff;
+
+    margin-left:8px;
+}
+
+.notificacao:hover{
+    background:#4b5563;
+}
+
+.notificacao span{
+
+    position:absolute;
+
+    top:4px;
+    right:4px;
+
+    width:18px;
+    height:18px;
+
+    background:#ef4444;
+
+    color:#fff;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:11px;
+    font-weight:bold;
+}
+.logoSistema{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.logoPousada{
+
+    width:56px;
+    height:56px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:#fff;
+
+    padding:4px;
+
+}
+
+.dadosEmpresa{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.dadosEmpresa h2{
+
+    font-size:20px;
+    margin:0;
+    color:#fff;
+
+}
+
+.dadosEmpresa span{
+
+    font-size:12px;
+    color:#d1d5db;
+
+}
+
+.usuarioSistema{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.fotoUsuario{
+
+    width:42px;
+    height:42px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    object-fit:cover;
+
+    padding:3px;
+
+}
+
+.nomeUsuario{
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+.nomeUsuario strong{
+
+    font-size:14px;
+    color:#fff;
+
+}
+
+.nomeUsuario small{
+
+    color:#d1d5db;
+
+}
+
+.notificacao{
+
+    position:relative;
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:#374151;
+
+    border-radius:10px;
+
+    cursor:pointer;
+
+    transition:.2s;
+
+    font-size:22px;
+
+}
+
+.notificacao:hover{
+
+    background:#4b5563;
+
+}
+
+.notificacao span{
+
+    position:absolute;
+
+    top:-5px;
+    right:-5px;
+
+    width:22px;
+    height:22px;
+
+    border-radius:50%;
+
+    background:#ef4444;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#fff;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+.painelNotificacoes{
+
+    position:fixed;
+
+    right:20px;
+    top:70px;
+
+    width:340px;
+
+    background:#fff;
+
+    border-radius:10px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+
+    display:none;
+
+    z-index:9999;
+
+}
+
+.painelNotificacoes h3{
+
+    padding:15px;
+
+    background:#1f2937;
+
+    color:#fff;
+
+    border-radius:10px 10px 0 0;
+
+}
+
+.itemNotificacao{
+
+    padding:12px 15px;
+
+    border-bottom:1px solid #ececec;
+
+    font-size:14px;
+
+}
+
+.itemNotificacao:last-child{
+
+    border-bottom:none;
+
+}
+.celula::after{
+    content:"+";
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(.7);
+
+    width:20px;
+    height:20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#10b981;
+    color:#fff;
+
+    font-size:16px;
+    font-weight:bold;
+
+    opacity:0;
+    transition:.15s;
+    pointer-events:none;
+}
+
+.celula:hover::after{
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1);
+}
+.linha:hover .reserva{
+    z-index:30;
+}
+
+.reserva:hover{
+    z-index:40;
+}
+/* GRID */
+
+
+.grid{
+
+    position:relative;
+    min-width:3000px;
+}
+
+
+
+.linha{
+
+    height:55px;
+
+    display:flex;
+
+    position:relative;
+
+}
+
+
+
+.celula{
+
+    width:34px;
+
+    min-width:34px;
+
+    height:55px;
+
+    border-right:1px solid #efefef;
+
+    border-bottom:1px solid #efefef;
+
+    background:white;
+
+}
+
+
+
+/* RESERVAS */
+
+
+.reserva{
+
+    position:absolute;
+
+    height:32px;
+    top:12px;
+    border-radius:4px;
+
+    color:white;
+
+    font-size:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 8px;
+
+    overflow:hidden;
+
+    white-space:nowrap;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    z-index:20;
+
+}
+
+.reserva:hover{
+
+    transform:scaleY(1.08);
+
+    box-shadow:
+    0 4px 10px rgba(0,0,0,.25);
+
+}
+
+
+
+.reserva span{
+
+    display:block;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
+
+
+
+/* animação nome grande */
+
+.reserva:hover span{
+
+    animation:
+    moverNome 5s linear infinite;
+
+}
+
+
+
+@keyframes moverNome{
+
+
+0%{
+
+transform:translateX(0);
+
+}
+
+
+100%{
+
+transform:translateX(-50%);
+
+}
+
+
+}
+
+
+
+.reserva:hover{
+
+    opacity:.85;
+
+}
+
+
+
+.reserva:active{
+
+    cursor:grabbing;
+
+}
+
+
+
+.Check-in{
+
+    background:#22c55e;
+
+}
+
+
+
+.Em-Limpeza{
+    background:#f59e0b;
+}
+
+
+.Check-out{
+
+    background:#ef4444;
+    color:#fff;
+
+}
+.grid{
+    position:relative;
+    padding-top:0;
+}
+#limparNotificacoes{
+
+    width:90%;
+
+    margin:10px;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#ef4444;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+}
+
+
+#limparNotificacoes:hover{
+
+    background:#dc2626;
+
+}
+.logoSistema{
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.logoSistema span{
+    font-size:14px;
+    font-weight:normal;
+    display:block;
+}
+.Hospedado{
+
+    
+    background:#3b82f6
+
+}
+
+
+
+/* MODAL */
+
+.caixaReserva textarea{
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    padding:8px;
+
+    resize:vertical;
+
+    min-height:70px;
+
+    font-family:inherit;
+
+    font-size:14px;
+
+}
+.modalReserva{
+
+    display:none;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:9999;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.caixaReserva{
+
+    background:white;
+
+    width:360px;
+
+    padding:25px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+.caixaReserva h3{
+
+    margin-bottom:10px;
+
+}
+
+
+
+.caixaReserva input,
+.caixaReserva select{
+
+    height:38px;
+
+    border:1px solid #ddd;
+
+    border-radius:6px;
+
+    padding:8px;
+
+}
+
+
+
+.acoesReserva{
+
+    display:flex;
+
+    gap:10px;
+
+    margin-top:15px;
+
+}
+
+
+
+.acoesReserva button{
+
+    flex:1;
+
+    border:none;
+
+    padding:10px;
+
+    border-radius:8px;
+
+    background:#2563eb;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+
+
+.acoesReserva button:hover{
+
+    background:#1d4ed8;
+
+}
+
+
+
+/* FILTRO DE MÊS */
+
+
+#filtroMes{
+
+    margin-left:10px;
+
+    padding:8px 12px;
+
+    border:none;
+
+    border-radius:8px;
+
+}
+
+
+
+/* RESPONSIVO */
+
+
+@media(max-width:900px){
+
+
+.colunaHospedagem{
+
+    width:180px;
+
+    min-width:180px;
+
+}
+
+
+
+.quarto{
+
+    font-size:12px;
+
+}
+
+.dias{
+
+    display:flex;
+    height:80px;
+
+}
+
+
+.dia{
+
+    width:70px;
+    min-width:70px;
+
+    height:80px;
+
+    background:#fff;
+
+    border-right:1px solid #d1d5db;
+
+    border-bottom:2px solid #d1d5db;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+
+
+
+.semana{
+
+    font-size:11px;
+
+    font-weight:600;
+
+    color:#64748b;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.numero{
+
+    font-size:28px;
+
+    font-weight:700;
+
+    color:#1f2937;
+
+}
+
+
+
+.fimSemana{
+
+    background:#f9fafb;
+
+}
+
+
+
+.fimSemana .numero{
+
+    color:#2563eb;
+
+}
+
+
+
+.hoje{
+
+    background:#e0f2fe;
+
+    box-shadow:inset 0 -4px 0 #0284c7;
+
+}
+/* =====================================
+   NOVO TOPO PREMIUM
+===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =====================================
+   TOPO PREMIUM
+===================================== */
+
+.topo{
+
+    height:78px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #1e40af
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 30px;
+
+    color:white;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:999;
+
+    box-shadow:
+    0 5px 20px rgba(0,0,0,.35);
+
+}
+
+
+
+/* LOGO */
+
+.logoSistema{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+
+.logoPousada{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    background:white;
+
+    padding:3px;
+
+    border:2px solid rgba(255,255,255,.7);
+
+}
+
+
+
+/* NOME EMPRESA */
+
+.dadosEmpresa{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.dadosEmpresa h2{
+
+    font-size:20px;
+
+    font-weight:700;
+
+    margin:0;
+
+    color:white;
+
+}
+
+
+.dadosEmpresa span{
+
+    font-size:12px;
+
+    color:#cbd5e1;
+
+}
+
+
+
+/* BOTÃO */
+
+.menu button{
+
+    background:#10b981;
+
+    color:white;
+
+    border:none;
+
+    padding:
+
+    12px 26px;
+
+    border-radius:12px;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    box-shadow:
+    0 5px 15px rgba(0,0,0,.25);
+
+}
+
+
+.menu button:hover{
+
+    background:#059669;
+
+    transform:
+    translateY(-2px);
+
+}
+
+
+
+/* USUÁRIO */
+
+.usuarioSistema{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+.fotoUsuario{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    border:3px solid white;
+
+}
+
+
+.nomeUsuario{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+
+.nomeUsuario strong{
+
+    color:white;
+
+    font-size:14px;
+
+}
+
+
+.nomeUsuario small{
+
+    color:#cbd5e1;
+
+    font-size:12px;
+
+}
+
+
+
+/* NOTIFICAÇÃO */
+
+.notificacao{
+
+    width:45px;
+
+    height:45px;
+
+    border-radius:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(8px);
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    transition:.2s;
+
+}
+
+
+.notificacao:hover{
+
+    background:
+    rgba(255,255,255,.25);
+
+}
+
+
+.notificacao span{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    width:22px;
+
+    height:22px;
+
+    background:#ef4444;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+}
+
+/* SINO */
+
+
+.notificacao{
+
+    width:44px;
+
+    height:44px;
+
+    border-radius:12px;
+
+    background:
+    rgba(255,255,255,.15);
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    position:relative;
+
+    backdrop-filter:blur(8px);
+
+    transition:.2s;
+
+}
+
+
+
+.notificacao:hover{
+
+    background:
+    rgba(255,255,255,.25);
+
+}
+
+
+
+.notificacao span{
+
+    position:absolute;
+
+    top:-5px;
+
+    right:-5px;
+
+    width:21px;
+
+    height:21px;
+
+    background:#ef4444;
+
+    color:white;
+
+    border-radius:50%;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+}
+.celula{
+    position:relative;
+    width:34px;
+    min-width:34px;
+    height:55px;
+    border-right:1px solid #efefef;
+    border-bottom:1px solid #efefef;
+    background:#fff;
+}
+
+/* Botão + */
+.celula::after{
+    content:"+";
+
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+
+    width:16px;
+    height:16px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid #7fd7c5;
+    border-radius:3px;
+
+    background:#fff;
+
+    color:#4db79d;
+
+    font-size:13px;
+    font-weight:700;
+
+    opacity:0;
+
+    transition:opacity .15s ease;
+
+    pointer-events:none;
+
+    box-sizing:border-box;
+}
+
+/* Mostrar apenas ao passar o mouse */
+.celula:hover::after{
+    opacity:1;
+}

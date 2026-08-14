@@ -1,593 +1,299 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
-<title>Real Medellin - Site Oficial</title>
-<link rel="icon" href="https://imgur.com/HK4PvFO.png">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Fonts & Font Awesome -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+<title>Pousada Vila Cactos Jeri - Mapa de Reserva</title>
 
-<!-- Bootstrap 5 CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-<style>
-body{
-  font-family:'Inter',sans-serif;
-  background:#f4fefe;
-  min-height:100vh;
-  color:#333;
-  padding-top:70px;
-}
-
-header{
-  height:70px;
-  background:#7b7b7b;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 30px;
-  color:#fff;
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:1000;
-}
-
-header strong span{color:#1fd1c1}
-
-nav{
-  display:none;
-  gap:20px;
-}
-
-nav button{
-  background:none;
-  border:none;
-  color:#fff;
-  font-size:14px;
-  cursor:pointer;
-  display:flex;
-  gap:8px;
-  align-items:center;
-}
-
-.login-btn{
-  background:#1fd1c1;
-  border:none;
-  padding:8px 16px;
-  border-radius:6px;
-  font-weight:700;
-  cursor:pointer;
-}
-
-.container-main{
-  max-width:1200px;
-  margin:20px auto 60px;
-  padding:0 20px;
-}
-
-.cards-animated{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  flex-wrap:wrap;
-  margin-top:50px;
-}
-
-.card-animated{
-  background:#fff;
-  padding:25px;
-  border-radius:12px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-  text-align:center;
-  width:250px;
-  margin-bottom:20px;
-  transition:all 0.3s;
-}
-
-.card-animated:hover{
-  transform:translateY(-5px);
-  box-shadow:0 12px 25px rgba(0,0,0,0.15);
-}
-
-.card-animated i{
-  margin-bottom:10px;
-}
-
-.about-section{
-  margin-top:60px;
-}
-
-.about-section img{
-  max-width:100%;
-  border-radius:15px;
-}
-
-.about-section p{
-  font-size:15px;
-  line-height:1.6;
-  color:#555;
-}
-
-main.internal{
-  max-width:900px;
-  margin:40px auto;
-  padding:0 20px;
-  display:none;
-}
-
-.card{
-  background:#fff;
-  padding:25px;
-  border-radius:14px;
-  box-shadow:0 10px 25px rgba(0,0,0,.1);
-  margin-bottom:25px;
-}
-
-input, select{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-}
-
-button.action{
-  background:#1fd1c1;
-  border:none;
-  padding:10px 16px;
-  border-radius:6px;
-  font-weight:700;
-  cursor:pointer;
-  margin-right:6px;
-  transition:all 0.3s;
-}
-
-button.action:hover{
-  background:#17b9a7;
-}
-
-.relatorio{
-  margin-top:15px;
-  background:#f1fffb;
-  padding:15px;
-  border-radius:10px;
-  border:1px solid #1fd1c1;
-  white-space: pre-wrap;
-}
-
-#login {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  z-index: 2000;
-}
-
-#login .modal-box {
-  background: #fff;
-  padding: 25px;
-  border-radius: 12px;
-  width: 300px;
-  max-width: 90%;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-</style>
 </head>
+
+
 <body>
+<div class="topo">
 
-<header>
- <strong>Real <span>Medellin</span></strong>
- <nav id="menu">
-  <button onclick="abrir('calc')"><i class="fa fa-calculator"></i> Calculadora</button>
-  <button onclick="abrir('estoque')"><i class="fa fa-box"></i> Estoque</button>
- </nav>
- <button class="login-btn" onclick="abrirLogin()">Login</button>
-</header>
+    <div class="logoSistema">
 
-<main class="container-main">
-  <section id="recrutamento-video" class="text-center my-5">
-    <h2 class="mb-4">📢 Quer se juntar à Real Medellin?</h2>
-    <p style="max-width:700px; margin:auto; font-size:16px; line-height:1.6;">
-      Assista ao vídeo abaixo para conhecer as regras e como se tornar membro.
-    </p>
-    <div class="mt-4">
-      <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
-        <iframe src="https://www.youtube.com/embed/COLE_SEU_VIDEO_AQUI" 
-                title="Vídeo de Recrutamento" allowfullscreen>
-        </iframe>
-      </div>
+        <img src="https://imgur.com/qu0aOnr.png" class="logoPousada">
+
+        <div class="dadosEmpresa">
+
+            <h2>Vila Cactos Jeri - ANEXO</h2>
+
+            <span>Mapa de Reservas</span>
+
+        </div>
+
     </div>
-    <p class="mt-3" style="font-size:14px; color:#555;">
-      Após assistir, clique em <strong>Login</strong> no topo.
-    </p>
-  </section>
 
-  <section id="regras" class="cards-animated">
-    <div class="card-animated">
-      <i class="fas fa-gavel fa-3x"></i>
-      <h3 class="mt-3">Regras da Cidade</h3>
-      <p>Respeite todos, siga a lei, não use trapaças, respeite áreas restritas e aja conforme seu papel na cidade.</p>
+
+    <div class="menu">
+
+        <button id="btnNovaReserva">
+            ＋ Nova Reserva
+        </button>
+
     </div>
-    <div class="card-animated">
-      <i class="fa-solid fa-coins fa-3x text-warning"></i>
-      <h3 class="mt-3">Valores da Tabela</h3>
-      <p>Todos os serviços devem seguir rigorosamente a tabela oficial.</p>
+
+
+    <div class="usuarioSistema">
+
+
+        <div class="notificacao" id="abrirNotificacoes">
+
+            🔔
+
+            <span id="contadorNotificacao">
+                0
+            </span>
+
+        </div>
+
+
+        <div class="nomeUsuario">
+
+            <strong>
+                Administrador
+            </strong>
+
+            <small>
+                Sistema Online
+            </small>
+
+        </div>
+
+
     </div>
-  </section>
 
-  <section class="about-section">
-    <h2 class="text-center mb-4">Sobre Nós</h2>
-    <div class="row align-items-center">
-      <div class="col-md-6 text-center mb-3">
-        <img src="https://imgur.com/wTsiZXO.png" alt="Real Medellin">
-      </div>
-      <div class="col-md-6">
-        <p><strong>Real Medellin</strong> atua na Central RP, fornecendo munição e equipamentos para facções, com mais de 5 anos de experiência.</p>
-      </div>
-    </div>
-  </section>
-</main>
 
-<main class="internal">
+</div>
 
-<!-- CALCULADORA -->
-<div class="card" id="calc">
-<h2 style="display:flex; justify-content:space-between; align-items:center;">
-  🧮 Calculadora
-  <button id="toggleTabela" class="action" onclick="trocarTabela()">🔄 Armas</button>
-</h2>
-<input id="nome" placeholder="Nome do membro">
-<input id="idMembro" placeholder="ID do membro">
-<input id="idCliente" placeholder="ID do cliente">
-<select id="tipoDesconto" onchange="atualizarTotal()">
-  <option value="0">Sem desconto</option>
-  <option value="10">Parceria (10% OFF)</option>
-  <option value="20">Membro da Facção (20% OFF)</option>
+<div class="legend">
+
+
+<div class="itemLegend">
+
+<div class="cor verde"></div>
+
+Check-in
+
+</div>
+
+
+
+<div class="itemLegend">
+
+<div class="cor amarelo"></div>
+
+Em Limpeza
+
+</div>
+
+
+
+<div class="itemLegend">
+
+<div class="cor vermelho"></div>
+
+Check-out
+
+</div>
+
+
+
+<div class="itemLegend">
+
+<div class="cor azul"></div>
+
+Hospedado
+
+</div>
+
+
+</div>
+
+
+
+<div class="wrapper">
+
+
+<div class="timeline">
+
+
+<div class="colunaHospedagem">
+
+
+<div class="headerHospedagem">
+
+Hospedagens
+
+</div>
+
+
+<div id="listaHospedagens"></div>
+
+
+</div>
+
+
+
+<div class="calendario">
+
+
+<div class="meses" id="cabecalhoMeses"></div>
+
+
+<div class="grid" id="gradeReservas"></div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+<!-- MODAL NOVA RESERVA -->
+
+<div id="modalReserva" class="modalReserva">
+
+
+<div class="caixaReserva">
+
+
+<h3>Nova Reserva</h3>
+
+
+
+<label>Hóspede</label>
+
+<input 
+id="nomeHospede"
+type="text"
+placeholder="Nome do hóspede"
+>
+
+
+
+<label>Telefone</label>
+
+<input 
+id="telefoneHospede"
+type="text"
+placeholder="Telefone"
+>
+<label>Observação</label>
+
+<textarea
+    id="observacaoReserva"
+    placeholder="Digite uma observação..."
+></textarea>
+
+<label>Hospedagem</label>
+
+<select id="casaReserva"></select>
+
+
+
+<label>Entrada</label>
+
+<input 
+id="dataEntrada"
+type="date"
+>
+
+
+
+<label>Saída</label>
+
+<input 
+id="dataSaida"
+type="date"
+>
+
+
+
+<label>Status</label>
+
+
+<select id="statusReserva">
+
+<option value="Check-in">
+Check-in
+</option>
+
+<option value="Em-Limpeza">
+Em Limpeza
+</option>
+
+<option value="Check-out">
+Check-out
+</option>
+
+<option value="Hospedado">
+Hospedado
+</option>
+
 </select>
 
-<div class="calc" id="tabelaMunicao">
-   <div class="row"><span>Fajuta (R$ 500)</span><input type="number" data-name="Fajuta" data-price="500" value="0"></div>
-   <div class="row"><span>Five (R$ 1.000)</span><input type="number" data-name="Five" data-price="1000" value="0"></div>
-   <div class="row"><span>Tec-9 (R$ 1.200)</span><input type="number" data-name="Tec-9" data-price="1200" value="0"></div>
-   <div class="row"><span>SMGs (R$ 2.000)</span><input type="number" data-name="SMGs" data-price="2000" value="0"></div>
-   <div class="row"><span>Fuzis (R$ 3.000)</span><input type="number" data-name="Fuzis" data-price="3000" value="0"></div>
-   <div class="row"><span>G3 (R$ 4.000)</span><input type="number" data-name="G3" data-price="4000" value="0"></div>
-   <div class="row"><span>QBZ83 (R$ 9.000)</span><input type="number" data-name="QBZ83" data-price="9000" value="0"></div>
-   <div class="row"><span>ADVANCED RIFRE (R$ 9.000)</span><input type="number" data-name="ADVANCED RIFRE" data-price="9000" value="0"></div>
-   <div class="row"><span>BULLPUP RIFRE MK2 (R$ 10.000)</span><input type="number" data-name="BULLPUP RIFRE MK2" data-price="10000" value="0"></div>
-   <div class="row"><span>FN SCAR (R$ 10.000)</span><input type="number" data-name="FN SCAR" data-price="10000" value="0"></div>
+
+<div class="acoesReserva">
+
+<button id="salvarReserva">
+Salvar
+</button>
+
+
+<button id="btnExcluirReserva" style="display:none;background:#ef4444;">
+Excluir Reserva
+</button>
+
+
+<button id="cancelarReserva">
+Cancelar
+</button>
+
 </div>
 
-<div class="calc" id="tabelaArmas" style="display:none">
-  <div class="row"><span>FAJUTA (R$ 75.000)</span><input type="number" data-name="Pistola" data-price="75000" value="0"></div>
-  <div class="row"><span>FIVEN-SEVEN (R$ 150.000)</span><input type="number" data-name="Pistola" data-price="150000" value="0"></div>
-  <div class="row"><span>TEC-9 (R$ 200.000)</span><input type="number" data-name="SMG" data-price="200000" value="0"></div>
-  <div class="row"><span>SMG (R$ 320.000)</span><input type="number" data-name="SMG" data-price="320000" value="0"></div>
-  <div class="row"><span>AR OU Fuzil Secundario (R$ 470.000)</span><input type="number" data-name="Fuzil" data-price="470000" value="0"></div>
-  <div class="row"><span>G3 E Fuzil Primario (R$ 530.000)</span><input type="number" data-name="Fuzil" data-price="530000" value="0"></div>
+
 </div>
 
-<br>
-<button class="action" onclick="gerarRelatorio()">🧾 Gerar Relatório</button>
-<button class="action" onclick="enviarDiscord()">📤 Enviar Discord</button>
-<button class="action" onclick="limpar()">🧹 Limpar</button>
-<p style="margin-top:10px; font-weight:700;">💰 Valor Total: R$ <span id="totalValor">0</span></p>
-
-<div class="relatorio" id="relatorio" style="display:none">
-<h3>📄 Relatório Gerado</h3>
-<pre id="textoRelatorio"></pre>
-</div>
 </div>
 
-<!-- ESTOQUE -->
-<div class="card" id="estoque">
-<h2>📦 Relatório de Estoque</h2>
 
-<input id="nomeEstoque" placeholder="Nome do membro">
-<input id="idMembroEstoque" placeholder="ID do membro">
-<input id="itemEstoque" placeholder="Item">
-<input id="qtdEstoque" type="number" placeholder="Quantidade">
 
-<select id="tipoEstoque">
-  <option value="retirou">Retirou</option>
-  <option value="colocou">Colocou</option>
-</select>
 
-<select id="bauEstoque">
-<option value="lider">Baú do Líder</option>
-<option value="gerente">Baú do Gerente</option>
-<option value="membro">Baú do Membro</option>
-</select>
-
-<div style="margin-top:15px;">
-  <button class="action" onclick="gerarRelatorioEstoque()">🧾 Gerar Relatório</button>
-  <button class="action" onclick="enviarEstoqueDiscord()">📤 Enviar Discord</button>
-  <button class="action" onclick="limparRelatorioEstoque()">🧹 Limpar</button>
 </div>
 
-<div class="relatorio" id="relatorioEstoque" style="display:none; margin-top:20px;">
-  <h3>📄 Relatório Gerado</h3>
-  <pre id="textoRelatorioEstoque"></pre>
-</div>
+
+
 </div>
 
-</main>
+<!-- CARREGAMENTO DO SISTEMA -->
+<div id="painelNotificacoes" class="painelNotificacoes">
 
-<div class="modal" id="login">
-  <div class="modal-box">
-    <h3>🔐 Tela de Login</h3>
-    <input type="password" id="senha" placeholder="Senha">
-    <button class="action" onclick="logar()">Entrar</button>
-  </div>
+<h3>Notificações</h3>
+
+<div id="listaNotificacoes"></div>
+
+<button id="limparNotificacoes">
+    Limpar
+</button>
+
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 
-<script>
-/* ================= CONFIGURACAO ================= */
-const SENHA_MECANICO = "medellin"; // ideal: mover pro backend
-const WEBHOOK_MUNICION = "https://discord.com/api/webhooks/1465906229170802758/0P_d2ZGA_sZKeetwhyfk9EenCD_Za8bPFEpQuwvWLtxcFOqXAnJ9Pg6SY9-SBXGI9kBJ";
-const WEBHOOK_ESTOQUE = "https://discord.com/api/webhooks/1467602295469641847/5XjHQ142tB_e25xsA5dDgaV4M3GJ2Hbybv9tvsQmruzGgvKqi9MP-Tli5PmUpXaoPsUR"
-
-/* LOGIN */
-function abrirLogin(){ document.getElementById("login").style.display="flex"; }
-
-function logar(){
-  const senhaInput = document.getElementById("senha").value;
-  if(senhaInput!==SENHA_MECANICO){ alert("Senha incorreta"); return; }
-  document.getElementById("login").style.display="none";
-  document.querySelector('main.internal').style.display='block';
-  document.getElementById("menu").style.display="flex";
-  abrir('calc');
-  document.getElementById("recrutamento-video").style.display="none";
-  document.getElementById("regras").style.display="none";
-  document.querySelector(".about-section").style.display="none";
-  document.querySelector(".login-btn").style.display="none";
-  inicializarCalculadora();
-}
-
-/* MENU */
-function abrir(id){
-  document.querySelectorAll(".internal .card").forEach(c=>c.style.display="none");
-  document.getElementById(id).style.display="block";
-  document.getElementById("menu").style.display="flex";
-}
-
-/* CALCULADORA */
-let relatorioTexto="", relatorioTotal=0, calcInputs, tabelaAtiva="municao";
-
-function inicializarCalculadora(){
-  document.getElementById("tabelaMunicao").style.display = "block";
-  document.getElementById("tabelaArmas").style.display = "none";
-  tabelaAtiva = "municao";
-
-  const btn = document.getElementById("toggleTabela");
-  btn.innerText = "🔄 Armas";
-
-  // 🔥 PEGA TODOS OS INPUTS (MUNIÇÃO + ARMAS)
-  document.querySelectorAll("#tabelaMunicao input, #tabelaArmas input")
-    .forEach(i => i.addEventListener("input", atualizarTotal));
-
-  atualizarTotal();
-}
-
-
-function trocarTabela(){
-  const tabelaMunicao=document.getElementById("tabelaMunicao");
-  const tabelaArmas=document.getElementById("tabelaArmas");
-  const btn=document.getElementById("toggleTabela");
-
-  if(tabelaAtiva==="municao"){
-    tabelaMunicao.style.display="none";
-    tabelaArmas.style.display="block";
-    tabelaAtiva="armas";
-    btn.innerText="🔄 Munição";
-  }else{
-    tabelaMunicao.style.display="block";
-    tabelaArmas.style.display="none";
-    tabelaAtiva="municao";
-    btn.innerText="🔄 Armas";
-  }
-}
-
-function atualizarTotal(){
-  let total = 0;
-
-  // MUNIÇÃO
-  document.querySelectorAll("#tabelaMunicao input").forEach(i=>{
-    const qtd = Number(i.value);
-    if(qtd > 0) total += qtd * Number(i.dataset.price);
-  });
-
-  // ARMAS
-  document.querySelectorAll("#tabelaArmas input").forEach(i=>{
-    const qtd = Number(i.value);
-    if(qtd > 0) total += qtd * Number(i.dataset.price);
-  });
-
-  const desconto = Number(document.getElementById("tipoDesconto").value);
-  const totalFinal = total * (1 - desconto / 100);
-
-  document.getElementById("totalValor").innerText =
-    totalFinal.toLocaleString("pt-BR");
-}
-function gerarRelatorio(){
-  const nome = document.getElementById("nome").value;
-  const idMembro = document.getElementById("idMembro").value;
-  const idCliente = document.getElementById("idCliente").value;
-
-  if(!nome || !idMembro || !idCliente){
-    alert("Preencha todos os dados.");
-    return;
-  }
-
-  let texto = "";
-  let total = 0;
-
-  // MUNIÇÃO
-  document.querySelectorAll("#tabelaMunicao input").forEach(i=>{
-    const qtd = Number(i.value);
-    if(qtd > 0){
-      const sub = qtd * Number(i.dataset.price);
-      total += sub;
-      texto += `• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
-    }
-  });
-
-  // ARMAS
-  document.querySelectorAll("#tabelaArmas input").forEach(i=>{
-    const qtd = Number(i.value);
-    if(qtd > 0){
-      const sub = qtd * Number(i.dataset.price);
-      total += sub;
-      texto += `• ${i.dataset.name}: ${qtd}x → R$ ${sub.toLocaleString("pt-BR")}\n`;
-    }
-  });
-
-  if(!texto){
-    alert("Nenhum item selecionado.");
-    return;
-  }
-
-  const desconto = Number(document.getElementById("tipoDesconto").value);
-  const totalFinal = total * (1 - desconto / 100);
-
-  relatorioTexto =
-`👤 MEMBRO: ${nome}
-🆔 ID: ${idMembro}
-👥 CLIENTE ID: ${idCliente}
-
-${texto}
-💰 TOTAL GERAL: R$ ${totalFinal.toLocaleString("pt-BR")}`;
-
-  document.getElementById("textoRelatorio").innerText = relatorioTexto;
-  document.getElementById("totalValor").innerText =
-    totalFinal.toLocaleString("pt-BR");
-
-  document.getElementById("relatorio").style.display = "block";
-}
-
-
-function enviarDiscord(){
-  if(!relatorioTexto){ alert("Gere o relatório primeiro."); return; }
-  fetch(WEBHOOK_MUNICION,{method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({embeds:[{title:"📄 Relatório de Munição",description:relatorioTexto,color:3066993,footer:{text:"Sistema Real Medellin"}}]})
-  });
-  alert("Relatório de munição enviado!");
-}
-
-function limpar(){
-  document.getElementById("nome").value="";
-  document.getElementById("idMembro").value="";
-  document.getElementById("idCliente").value="";
-  document.getElementById("tipoDesconto").value="0";
-  document.querySelectorAll("#tabelaMunicao input, #tabelaArmas input")
-  .forEach(i => i.value = 0);
-  relatorioTexto=""; relatorioTotal=0;
-  document.getElementById("textoRelatorio").innerText="";
-  document.getElementById("totalValor").innerText="0";
-  document.getElementById("relatorio").style.display="none";
-}
-
-/* ESTOQUE */
-let relatorioEstoqueTexto="";
-function gerarRelatorioEstoque(){
-  const nome=document.getElementById("nomeEstoque").value;
-  const id=document.getElementById("idMembroEstoque").value;
-  const item=document.getElementById("itemEstoque").value;
-  const qtd=document.getElementById("qtdEstoque").value;
-  const tipo=document.getElementById("tipoEstoque").value;
-  const bau=document.getElementById("bauEstoque").value;
-
-  if(!nome||!id||!item||!qtd){ alert("Preencha todos os campos."); return; }
-
-  const bauTexto=bau==="lider"?"Baú do Líder":bau==="gerente"?"Baú do Gerente":"Baú do Membro";
-
-  relatorioEstoqueTexto=`👤 MEMBRO: ${nome}\n🆔 ID: ${id}\n📦 Item: ${item}\n🔢 Quantidade: ${qtd}\n📌 Tipo: ${tipo==="retirou"?"Retirou":"Colocou"}\n📂 Baú: ${bauTexto}`;
-
-  document.getElementById("textoRelatorioEstoque").innerText=relatorioEstoqueTexto;
-  document.getElementById("relatorioEstoque").style.display="block";
-}
-
-function enviarEstoqueDiscord(){
-  if(!relatorioEstoqueTexto){ alert("Gere o relatório primeiro."); return; }
-  fetch(WEBHOOK_ESTOQUE,{method:"POST",headers:{"Content-Type":"application/json"},
-    body:JSON.stringify({embeds:[{title:"📦 Relatório de Estoque",description:relatorioEstoqueTexto,color:16753920,footer:{text:"Sistema Real Medellin - Estoque"}}]})
-  });
-  alert("Relatório de estoque enviado!");
-}
-
-function limparRelatorioEstoque(){
-  relatorioEstoqueTexto="";
-  document.getElementById("textoRelatorioEstoque").innerText="";
-  document.getElementById("relatorioEstoque").style.display="none";
-  document.getElementById("nomeEstoque").value="";
-  document.getElementById("idMembroEstoque").value="";
-  document.getElementById("itemEstoque").value="";
-  document.getElementById("qtdEstoque").value="";
-  document.getElementById("tipoEstoque").value="retirou";
-  document.getElementById("bauEstoque").value="lider";
-}
-</script>
-<!-- ===== SEGURANÇA ===== -->
-<script>
-document.addEventListener("contextmenu",e=>e.preventDefault());
-document.addEventListener("selectstart",e=>e.preventDefault());
-document.addEventListener("dragstart",e=>e.preventDefault());
-
-document.addEventListener("keydown",e=>{
-  if(
-    e.key==="F12" ||
-    (e.ctrlKey&&e.shiftKey&&["I","J","C","K"].includes(e.key.toUpperCase())) ||
-    (e.ctrlKey&&["U","S","C","V","X","A","P"].includes(e.key.toUpperCase()))
-  ){
-    e.preventDefault(); return false;
-  }
-});
-
-(function(){
-  const d=new Image();
-  Object.defineProperty(d,"id",{get:function(){
-    document.body.innerHTML='<div style="background:black;color:white;height:100vh;display:flex;align-items:center;justify-content:center"><h1>⛔ ACESSO BLOQUEADO</h1></div>';
-    throw new Error();
-  }});
-  setInterval(()=>console.log(d),1000);
-})();
-
-document.querySelectorAll("img").forEach(img=>{
-  img.setAttribute("draggable","false");
-  img.style.pointerEvents="none";
-});
-</script>
+<div class="cactoLateral">
+    <img src="https://imgur.com/bHozaG7.png">
+</div>
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
