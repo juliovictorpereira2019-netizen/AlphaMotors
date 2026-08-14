@@ -11,51 +11,9 @@ const hospedagens = [
 {
 categoria:"DUPLO",
 quartos:[
-"APTO 04(DUPLO COM VARANDA)",
-"APTO 07(DUPLO)",
-"APTO 08(DUPLO)",
-"APTO 09(DUPLO)",
-"APTO 10(DUPLO)",
-"APTO 11(DUPLO)",
-"APTO 12(DUPLO)",
-"APTO 13(DUPLO)",
-"APTO 14(DUPLO)",
-"APTO 15(DUPLO)",
-"APTO 17(DUPLO)",
-"APTO 18(DUPLO)",
-"APTO 20(DUPLO-MASTER)"
-]
-},
-
-{
-categoria:"TRIPLO",
-quartos:[
-"APTO 01(TRIPLO)",
-"APTO 05(TRIPLO)",
-"APTO 16(TRIPLO)",
-"APTO 21(TRIPLO)"
-]
-},
-
-{
-categoria:"QUADRUPLO",
-quartos:[
-"APTO 02(QUADRUPLO)",
-"APTO 06(QUADRUPLO)"
-]
-},
-
-{
-categoria:"QUINTUPLO",
-quartos:[
-"APTO 03(QUINTUPLO)"
-]
-},
-
-{
-categoria:"SEXTUPLO",
-quartos:[
-"APTO 19(SEXTUPLO)"
+"APTO 03(DUPLO)",
+"APTO 04(DUPLO)",
+"APTO 08(DUPLO)"
 ]
 }
 
