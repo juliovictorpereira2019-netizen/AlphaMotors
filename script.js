@@ -13,6 +13,7 @@ categoria:"DUPLO",
 quartos:[
 "APTO 03(DUPLO)",
 "APTO 04(DUPLO)",
+"APTO 05(DUPLO)",    
 "APTO 08(DUPLO)"
 ]
 }
