@@ -15,7 +15,8 @@ quartos:[
 "APTO 03(DUPLO)",
 "APTO 04(TRIPLO)",
 "APTO 05(DUPLO)",    
-"APTO 06(TRIPLO)"
+"APTO 06(TRIPLO)",
+"APTO 07(DUPLO)"    
 ]
 }
 
