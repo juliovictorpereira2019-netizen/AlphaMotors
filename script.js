@@ -12,8 +12,7 @@ const hospedagens = [
 categoria:"DUPLO",
 quartos:[
 "APTO 03(DUPLO)",
-"APTO 04(TRIPLO)",
-"APTO 05(DUPLO)",    
+"APTO 04(TRIPLO)",   
 "APTO 06(TRIPLO)",
 "APTO 07(TRIPLO)",
 "APTO 09 MADEIRA(DUPLO)",
